@@ -1,4 +1,8 @@
+require_relative "menu.rb"
+require_relative "pizza.rb"
+
 done = false
+menu = Menu.new
 
 puts "Hello, welcome to our pizza express delivery"
 
@@ -14,13 +18,14 @@ while not done
   case choice
     when 1
       puts "Let me show you the menu"
+      menu.print_menu
     when 2
       done = true
     else
       "I dont understand"
   end
 
-  #say goodbye if the customer is leaving         
+  #say goodbye if the customer is leaving
   if done
     puts "Thank you for your visit! hope to see you again soon."
     puts "   __"
